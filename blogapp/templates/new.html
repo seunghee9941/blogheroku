@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<div class="container" aria-live="polite" aria-atomic="true" style="position: relative; min-height: 100px;">
+    <h1 class="jumbotron-heading">Blog</h1>
+    <p class="lead text-muted">글쓰기</p>
+    <hr>
+    <div style="position: absolute; top: 0; right:0;">
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="false">
+            <div class="toast-header">
+                <img src="{% static 'DD.PNG' %}" width="20px" height="20px" class="rounded mr-2" alt="...">
+                <strong class="mr-auto">Seunghee</strong>
+                <small>개발 중•••</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                이곳에서 글을 작성하세요
+            </div>
+        </div>
+    </div>
+    <script>$('.toast').toast('show')</script>
+</div>
+        <div class="container">
+            <form name="form" action="{% url 'create' %}">
+                <h4>제목: </h4>
+                <input type="text" name="title">
+                <br><br>
+                <h4>본문: </h4>
+                <textarea cols=40 rows=10 name="body"></textarea>
+                <br><br>
+                <input class="btn btn-warning" type="submit" value="제출하기">
+            </form>
+        </div>
+{% endblock %}

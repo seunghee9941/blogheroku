@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<div class="container" aria-live="polite" aria-atomic="true" style="position: relative; min-height: 100px;">
+    <h1 class="jumbotron-heading">About</h1>
+    <p class="lead text-muted">멋쟁이사자처럼 블로그 프로젝트입니다.</p>
+    <hr>
+    <div style="position: absolute; top: 0; right:0;">
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="false">
+            <div class="toast-header">
+                <img src="{% static 'DD.PNG' %}" width="20px" height="20px" class="rounded mr-2" alt="...">
+                <strong class="mr-auto">Seunghee</strong>
+                <small>개발 중•••</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                환영합니다~.~
+            </div>
+        </div>
+    </div>
+    <script>$('.toast').toast('show')</script>
+</div>
+  <section class="bg-light page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <p></p>
+          <h2 class="section-heading text-uppercase">Profile</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4" style="margin-left:auto; margin-right:auto;">
+          <div class="team-member" style="text-align:center;">
+            <img class="mx-auto rounded-circle" width="200px" height="200px" src="{% static 'DD.PNG' %}" alt="디디">
+            <p></p>
+            <h4 style="text-align:center"><strong>이승희</strong></h4>
+            <p class="text-muted" style="text-align:center">덕성여자대학교 컴퓨터공학과</p>
+            <p class="text-muted" style="text-align:center">멋쟁이사자처럼 7기</p>
+            <ul class="list-inline social-buttons" style="text-align:center">
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/99._.0401/" class="text-warning"><i>insta</i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/seunghee9941/blogheroku.git" class="text-warning"><i>github</i></a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
